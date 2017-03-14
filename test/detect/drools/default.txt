@@ -1,0 +1,19 @@
+/*
+ * Comments
+ */
+
+package org.foo.bar
+ 
+import org.foo.bar.baz;
+import org.foo.bar.quux;
+
+rule "Corrupt the Honest"
+    when
+        asset : Asset( honest == true )
+        exists( Hope() )
+    then
+        System.out.println( "Some String" );
+        modify( asset ) {
+            setFoo( false )
+        }
+end
